@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "My first post!"
+date:   2020-11-18 20:47:32 +0800
+categories: jekyll
+---
+
+### Hi there!
+
+I am *italic* and **bold**!
+1. item 1
+  - item 1.1
+  - item 1.2
+2. item 2
+
+- item 3
+  - item 3.1
+  - item 3.2
+- item 4
+  1. item 4.1
+  2. item 4.2
+
+[GitHub](http://github.com)
+
+As Kanye West said:
+
+> We're living the future so\
+> the present is our past.
+
+I think you should use an
+`<addr>` element here instead.
+
+
+```javascript
+if (isAwesome){
+  return true
+}
+```
