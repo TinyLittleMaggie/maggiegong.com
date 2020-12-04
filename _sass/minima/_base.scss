@@ -97,7 +97,45 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+h1 {
+  @include relative-font-size(2.25);
+  font-weight: 500;
+  line-height: 1.2;
 
+  @include media-query($on-laptop) {
+    @include relative-font-size(2);
+  }
+}
+
+h2 {
+  @include relative-font-size(1.8);
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.575);
+  }
+}
+
+h3 {
+  @include relative-font-size(1.5);
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.3125);
+  }
+}
+
+h4 {
+  @include relative-font-size(1.25);
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.125);
+  }
+}
 
 /**
  * Links
