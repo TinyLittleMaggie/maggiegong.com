@@ -36,6 +36,7 @@
     transition: color 0.6s ease;
     line-height: $base-line-height;
     padding: 10px 0;
+    font-weight: 400;
 
     &:hover {
       color: $text-color;
@@ -127,8 +128,8 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  border-top: 1px solid $grey-color-lighter;
+  padding: $spacing-unit / 1.5 0;
 }
 
 .footer-heading {
@@ -140,6 +141,12 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+}
+
+.copyright {
+  color: $grey-color-light;
+  font-size: $base-font-size / 1.25;
+  margin-bottom: 0;
 }
 
 .footer-col-wrapper {
@@ -190,8 +197,6 @@
     width:         calc(100% - (#{$spacing-unit} / 2));
   }
 }
-
-
 
 /**
  * Page content
