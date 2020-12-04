@@ -32,12 +32,38 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color;
+    transition: color 0.6s ease;
     line-height: $base-line-height;
+    padding: 10px 0;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+      transition: color 0.5s ease;
+    }
+
+    &.active {
+      // border-bottom: 4px solid $brand-color-light;
+      color: $text-color;
+      font-weight: 700;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        bottom: 0;
+        height: 4px;
+        background-color: $brand-color-light;
+        border-radius: 2px;
+      }
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
 
