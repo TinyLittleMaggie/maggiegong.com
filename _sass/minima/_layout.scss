@@ -200,7 +200,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit * 2.5 0 $spacing-unit;
   flex: 1;
 }
 
