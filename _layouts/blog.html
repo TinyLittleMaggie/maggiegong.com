@@ -2,27 +2,24 @@
 layout: default
 ---
 
-<div class="home">
+{{ content }}
 
-  {{ content }}
+{%- if site.posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
+      <h2 class="post-title">
+        {{ post.title | escape }}
+      </h2>
+      {%- if site.show_excerpts -%}
+        <p class="post-excerpt">{{ post.excerpt }}</p>
+      {%- endif -%}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        Read more →
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
 
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
-        <h2 class="post-title">
-          {{ post.title | escape }}
-        </h2>
-        {%- if site.show_excerpts -%}
-          <p class="post-excerpt">{{ post.excerpt }}</p>
-        {%- endif -%}
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          Read more →
-        </a>
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-
-</div>
