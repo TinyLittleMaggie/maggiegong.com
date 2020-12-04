@@ -273,3 +273,11 @@
 .post-content {
   margin-bottom: $spacing-unit;
 }
+
+.post-meta {
+  color: $grey-color-light;
+
+  .dot-divider {
+    margin: 0 $spacing-unit * 0.25;
+  }
+}
