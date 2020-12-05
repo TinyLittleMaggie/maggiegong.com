@@ -1,5 +1,17 @@
 .home {
 
+  .tides {
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+    position: absolute;
+    top: calc(100vh - 180px);
+    background-image: url('/assets/tides.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .headline {
     line-height: 1.4;
   }
@@ -7,4 +19,11 @@
   .description {
     max-width: 350px;
   }
+
+  .site-footer {
+    .copyright {
+      color: $brand-color-light;
+    }
+  }
+
 }
