@@ -6,6 +6,8 @@
     position: relative;
   }
 
+  // Objects
+
   .tides {
     width: 100vw;
     height: 100vh;
@@ -16,14 +18,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-  }
-
-  .headline {
-    line-height: 1.4;
-  }
-
-  .description {
-    max-width: 350px;
   }
 
   .project-items {
@@ -74,6 +68,30 @@
       }
     }
   }
+
+  // Content
+
+  .headline {
+    line-height: 1.4;
+  }
+
+  .description {
+    max-width: 350px;
+  }
+
+  // Modals
+
+  .overlay{
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // Footer
 
   .site-footer {
     .copyright {
