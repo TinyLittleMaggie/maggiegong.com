@@ -20,52 +20,45 @@
     background-position: center top;
   }
 
-  .project-items {
+  #project-item-1 {
+    background-image: url('/assets/home-page-objects/frogger-game-normal.svg');
+    width: 120px;
+    height: 120px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -100px;
+    left: calc(50% - 60px);
+
+    &:hover {
+      background-image: url('/assets/home-page-objects/frogger-game-hover.svg');
+      cursor: pointer;
+    }
+  }
+
+  #project-item-2 {
+    background-image: url('/assets/home-page-objects/honniephone-normal.svg');
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: calc(45% - 60px);
     right: 0;
-    bottom: 0;
 
-    #item-1 {
-      background-image: url('/assets/home-page-objects/frogger-game-normal.svg');
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      top: -100px;
-      left: 45%;
-
-      &:hover {
-        background-image: url('/assets/home-page-objects/frogger-game-hover.svg');
-        cursor: pointer;
-      }
+    &:hover {
+      background-image: url('/assets/home-page-objects/honniephone-hover.svg');
+      cursor: pointer;
     }
+  }
 
-    #item-2 {
-      background-image: url('/assets/home-page-objects/honniephone-normal.svg');
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      right: 0;
+  #project-item-3 {
+    background-image: url('/assets/home-page-objects/memory-game-normal.svg');
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -80px;
+    left: calc(70% - 60px);
 
-      &:hover {
-        background-image: url('/assets/home-page-objects/honniephone-hover.svg');
-        cursor: pointer;
-      }
-    }
-
-    #item-3 {
-      background-image: url('/assets/home-page-objects/memory-game-normal.svg');
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      bottom: -80px;
-      left: 60%;
-
-      &:hover {
-        background-image: url('/assets/home-page-objects/memory-game-hover.svg');
-        cursor: pointer;
-      }
+    &:hover {
+      background-image: url('/assets/home-page-objects/memory-game-hover.svg');
+      cursor: pointer;
     }
   }
 
