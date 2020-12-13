@@ -74,7 +74,8 @@
 
   // Modals
 
-  .overlay{
+  .overlay {
+    display: none;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
@@ -82,6 +83,27 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    // For apps such as mini games
+    .modal-app {
+      display: flex;
+      max-width: 800px;
+      border-radius: 20px;
+      background-color: #fff;
+      padding: $spacing-unit * 2;
+      margin: $spacing-unit auto;
+
+      .text {
+        margin-right: $spacing-unit * 2;
+      }
+
+      .demo {
+        min-width: 360px;
+        background-color: $brand-color-light;
+      }
+    }
+
+    // For videos (TODO...)
   }
 
   // Footer
