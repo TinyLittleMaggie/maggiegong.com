@@ -38,8 +38,8 @@
       width: 120px;
       height: 120px;
       position: absolute;
-      top: -80px;
-      left: 50%;
+      top: -100px;
+      left: 45%;
 
       &:hover {
         background-image: url('/assets/home-page-objects/frogger-game-hover.svg');
@@ -52,7 +52,7 @@
       width: 120px;
       height: 120px;
       position: absolute;
-      right: -60px;
+      right: 0;
 
       &:hover {
         background-image: url('/assets/home-page-objects/honniephone-hover.svg');
@@ -65,8 +65,8 @@
       width: 120px;
       height: 120px;
       position: absolute;
-      bottom: -60px;
-      left: 70%;
+      bottom: -80px;
+      left: 60%;
 
       &:hover {
         background-image: url('/assets/home-page-objects/memory-game-hover.svg');
