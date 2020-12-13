@@ -54,3 +54,40 @@ $on-laptop:         800px !default;
   "minima/syntax-highlighting",
   "minima/home"
 ;
+
+// Placeholder for mobile device:
+// to be removed after working on responsiveness
+
+.mobile-device-placeholder {
+  display: none;
+}
+
+@include media-query($on-laptop) {
+  .mobile-device-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 9999;
+    padding: $spacing-unit * 2;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-query($on-palm) {
+  .mobile-device-placeholder {
+    padding: $spacing-unit;
+
+    p {
+      display: inline;
+    }
+  }
+}
