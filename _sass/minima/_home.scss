@@ -2,6 +2,10 @@
 
   overflow: hidden;
 
+  .wrapper {
+    position: relative;
+  }
+
   .tides {
     width: 100vw;
     height: 100vh;
@@ -20,6 +24,55 @@
 
   .description {
     max-width: 350px;
+  }
+
+  .project-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    #item-1 {
+      background-image: url('/assets/home-page-objects/frogger-game-normal.svg');
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      top: -80px;
+      left: 50%;
+
+      &:hover {
+        background-image: url('/assets/home-page-objects/frogger-game-hover.svg');
+        cursor: pointer;
+      }
+    }
+
+    #item-2 {
+      background-image: url('/assets/home-page-objects/honniephone-normal.svg');
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      right: -60px;
+
+      &:hover {
+        background-image: url('/assets/home-page-objects/honniephone-hover.svg');
+        cursor: pointer;
+      }
+    }
+
+    #item-3 {
+      background-image: url('/assets/home-page-objects/memory-game-normal.svg');
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      bottom: -60px;
+      left: 70%;
+
+      &:hover {
+        background-image: url('/assets/home-page-objects/memory-game-hover.svg');
+        cursor: pointer;
+      }
+    }
   }
 
   .site-footer {
