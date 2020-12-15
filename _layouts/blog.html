@@ -4,22 +4,46 @@ layout: default
 
 {{ content }}
 
-{%- if site.posts.size > 0 -%}
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
-      <h2 class="post-title">
-        {{ post.title | escape }}
-      </h2>
-      {%- if site.show_excerpts -%}
-        <p class="post-excerpt">{{ post.excerpt }}</p>
-      {%- endif -%}
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        Read more →
-      </a>
+<div class="blog">
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
+        <h2 class="post-title">
+          {{ post.title | escape }}
+        </h2>
+        {%- if site.show_excerpts -%}
+          <p class="post-excerpt">{{ post.excerpt }}</p>
+        {%- endif -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          Read more →
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <ul class="post-list-options">
+    <li class="option">
+      <label for="sort-by">Sort by</label>
+      <select name="sort" id="sort-by">
+        <option value="latest">Latest on top</option>
+        <option value="oldest">Oldest on top</option>
+        <option value="random">Random</option>
+      </select>
     </li>
-    {%- endfor -%}
+    <li class="option">
+      <label for="type">Type</label>
+      <select name="type" id="type">
+        <option value="project">Project</option>
+        <option value="experiment">Experiment</option>
+        <option value="thoughts">Thoughts</option>
+      </select>
+    </li>
   </ul>
-{%- endif -%}
+
+</div>
+
 

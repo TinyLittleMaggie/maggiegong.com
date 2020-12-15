@@ -22,6 +22,7 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 3;
+  max-width: 200px;
 
   .nav-trigger {
       display: none;
@@ -62,7 +63,7 @@
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: $spacing-unit * 0.8;
     }
   }
 
@@ -201,48 +202,6 @@
   padding: $spacing-unit * 2.5 0 $spacing-unit;
   flex: 1;
 }
-
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
-
-.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-bottom: $spacing-unit;
-    padding-bottom: $spacing-unit;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $grey-color-lighter;
-    }
-  }
-  .post-title {
-    @include relative-font-size(1.8);
-    font-weight: 500;
-    margin-bottom: $spacing-unit * 0.2;
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.575);
-    }
-  }
-
-  .post-excerpt {
-    margin-bottom: $spacing-unit * 0.3;
-  }
-
-  .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color-light;
-    margin-bottom: $spacing-unit * 0.2;
-  }
-
-  .post-link {
-    display: block;
-  }
-}
-
 
 
 

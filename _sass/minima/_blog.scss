@@ -1,0 +1,80 @@
+.blog {
+  display: flex;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  width: 66%;
+
+  > li {
+    margin-bottom: $spacing-unit;
+    padding-bottom: $spacing-unit;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-color-lighter;
+    }
+  }
+  .post-title {
+    @include relative-font-size(1.8);
+    font-weight: 500;
+    margin-bottom: $spacing-unit * 0.2;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.575);
+    }
+  }
+
+  .post-excerpt {
+    margin-bottom: $spacing-unit * 0.3;
+  }
+
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color-light;
+    margin-bottom: $spacing-unit * 0.2;
+  }
+
+  .post-link {
+    display: block;
+  }
+}
+
+.post-list-options {
+  list-style: none;
+  flex-grow: 1;
+
+  .option {
+    margin-bottom: $spacing-unit * 1.5;
+  }
+
+  label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: $spacing-unit * 0.2;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: $spacing-unit * 0.4 $spacing-unit * 0.1;
+    font-family: inherit;
+    font-size: $base-font-size;
+    color: $grey-color-dark;
+    border: none;
+    border-bottom: 1px solid $grey-color-dark;
+    width: 100%;
+    background: url('/assets/icons/arrow-dropdown.svg') 100% / 15% no-repeat;
+  }
+
+  select:-ms-expand {
+    /* remove default arrow on ie10 and ie11 */
+    display: none;
+  }
+
+  select:focus {
+    outline: none;
+    background-color: $grey-color-lighter;
+  }
+}
