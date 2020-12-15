@@ -22,10 +22,9 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 3;
-  max-width: 200px;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -63,7 +62,7 @@
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: $spacing-unit * 0.8;
+      margin-right: $spacing-unit * 1.2;
     }
   }
 
