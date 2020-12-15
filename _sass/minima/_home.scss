@@ -99,21 +99,54 @@
 
       .demo {
         min-width: 360px;
-        background-color: $brand-color-light;
       }
     }
 
     // For videos
     .modal-video {
-      width: 720px;
+      width: 800px;
       border-radius: 20px;
-      background-color: #fff;
-      padding: $spacing-unit * 2;
       margin: $spacing-unit auto;
+      overflow: hidden;
+      position: relative;
+      background-color: $grey-color-dark;
 
-      .demo {
-        width: 600px;
-        background-color: $brand-color-light;
+      .video-overlay {
+        margin-bottom: $spacing-unit;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: $spacing-unit * 3;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .text {
+        max-width: 400px;
+      }
+
+      .play-btn {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: $spacing-unit * 0.5;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .cta {
+        width: 210px;
+        color: #fff;
+        position: absolute;
+        bottom: $spacing-unit;
+        left: calc(50% - 105px);
+        display: none;
       }
     }
   }
