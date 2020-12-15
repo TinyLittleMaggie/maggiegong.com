@@ -75,7 +75,7 @@
   // Modals
 
   .overlay {
-    display: none;
+    // display: none;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
@@ -103,7 +103,19 @@
       }
     }
 
-    // For videos (TODO...)
+    // For videos
+    .modal-video {
+      width: 720px;
+      border-radius: 20px;
+      background-color: #fff;
+      padding: $spacing-unit * 2;
+      margin: $spacing-unit auto;
+
+      .demo {
+        width: 600px;
+        background-color: $brand-color-light;
+      }
+    }
   }
 
   // Footer
