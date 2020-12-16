@@ -31,12 +31,12 @@ show_excerpts: true
 
 defaults: # front matter defaults
   # every blog post's page.index should be 1 so that the "blog" nav link is active
-  -
-    scope:
-        path: ""
-        type: "posts" # everything inside the _posts folder
-    values:
-        index: 1
+  # -
+  #   scope:
+  #       path: ""
+  #       type: "posts" # everything inside the _posts folder
+  #   values:
+  #       index: 1
 
 # Build settings
 theme: minima
