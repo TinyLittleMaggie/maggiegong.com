@@ -95,8 +95,8 @@
       padding: $spacing-unit * 2;
       margin: $spacing-unit auto;
       position: relative;
-      // When cursor is inside the modal, use the default cursor
-      cursor: default;
+      // When cursor is inside the modal, use the normal cursor
+      cursor: auto;
 
       .text {
         margin-right: $spacing-unit * 2;
@@ -125,8 +125,8 @@
       overflow: hidden;
       position: relative;
       background-color: $grey-color-dark;
-      // When cursor is inside the modal, use the default cursor
-      cursor: default;
+      // When cursor is inside the modal, use the normal cursor
+      cursor: auto;
 
       .video-overlay {
         margin-bottom: $spacing-unit;
