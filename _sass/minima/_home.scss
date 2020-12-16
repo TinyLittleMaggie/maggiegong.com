@@ -20,7 +20,7 @@
     background-position: center top;
   }
 
-  #project-item-1 {
+  #item-1 {
     background-image: url('/assets/home-page-objects/frogger-game-normal.svg');
     width: 120px;
     height: 120px;
@@ -34,7 +34,7 @@
     }
   }
 
-  #project-item-2 {
+  #item-2 {
     background-image: url('/assets/home-page-objects/honniephone-normal.svg');
     width: 120px;
     height: 120px;
@@ -48,7 +48,7 @@
     }
   }
 
-  #project-item-3 {
+  #item-3 {
     background-image: url('/assets/home-page-objects/memory-game-normal.svg');
     width: 120px;
     height: 120px;
@@ -75,7 +75,7 @@
   // Modals
 
   .overlay {
-    // display: none;
+    display: none;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
@@ -83,6 +83,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    // Use a cross symbol as the cursor for the entire overlay area
+    cursor: url('/assets/icons/close-dark.svg') 12 12, default;
 
     // For apps such as mini games
     .modal-app {
@@ -92,6 +94,9 @@
       background-color: #fff;
       padding: $spacing-unit * 2;
       margin: $spacing-unit auto;
+      position: relative;
+      // When cursor is inside the modal, use the default cursor
+      cursor: default;
 
       .text {
         margin-right: $spacing-unit * 2;
@@ -99,6 +104,16 @@
 
       .demo {
         min-width: 360px;
+        z-index: 1;
+      }
+
+      .close-area {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 160px;
+        height: 160px;
+        cursor: url('/assets/icons/close-dark.svg') 12 12, default;
       }
     }
 
@@ -110,6 +125,8 @@
       overflow: hidden;
       position: relative;
       background-color: $grey-color-dark;
+      // When cursor is inside the modal, use the default cursor
+      cursor: default;
 
       .video-overlay {
         margin-bottom: $spacing-unit;
@@ -147,6 +164,15 @@
         bottom: $spacing-unit;
         left: calc(50% - 105px);
         display: none;
+      }
+
+      .close-area {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 120px;
+        height: 120px;
+        cursor: url('/assets/icons/close-light.svg') 12 12, default;
       }
     }
   }
