@@ -17,17 +17,7 @@
 
   </body>
 
+  <script src="/assets/js/resize-nav.js"></script>
+
 </html>
 
-<script>
-  // Shrink the nav bar when Y scroll position > 10px
-  var navbar = document.querySelector('.site-header');
-  function shrinkNav() {
-    if (window.scrollY > 10) {
-      navbar.classList.add('small');
-    } else {
-      navbar.classList.remove('small');
-    }
-  }
-  setInterval(shrinkNav, 100);
-</script>
