@@ -9,7 +9,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
+      <li data-post-type="{{ post.type }}">
         <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
         <h2 class="post-title">
           {{ post.title | escape }}
@@ -47,4 +47,5 @@ layout: default
 
 </div>
 
+<script src="/assets/js/sort-posts.js"></script>
 
