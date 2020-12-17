@@ -2,19 +2,24 @@
  * Site header
  */
 .site-header {
-  min-height: $spacing-unit * 1.865;
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.5s;
 
   // Positioning context for the mobile navigation icon
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .site-title {
   height: $base-line-height * $base-font-size * 3;
+  transition: height 0.5s;
   display: flex;
   align-items: center;
   float: left;
-  img {
-    height: $base-font-size * 2.75;
+  .logo {
+    width: $base-font-size * 10;
+    transition: width 0.2s;
     padding-top: 3px;
   }
 }
@@ -22,6 +27,7 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 3;
+  transition: line-height 0.5s;
 
   .nav-trigger {
     display: none;
@@ -120,6 +126,27 @@
   }
 }
 
+// The site header after scroll
+.site-header.small {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .05);
+  transition: box-shadow 0.5s;
+
+  .site-title {
+    height: $base-line-height * $base-font-size * 2.5;
+    transition: height 0.5s;
+  }
+
+  .logo {
+    width: $base-font-size * 9;
+    transition: width 0.2s;
+  }
+
+  .site-nav {
+    line-height: $base-line-height * $base-font-size * 2.5;
+    transition: line-height 0.5s;
+  }
+}
+
 
 
 /**
@@ -198,7 +225,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit * 2.5 0 $spacing-unit;
+  padding: $spacing-unit * 5.2 0 $spacing-unit;
   flex: 1;
 }
 
