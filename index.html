@@ -43,28 +43,4 @@ index: 0
 {%- include_relative _demos/project-3.html -%}
 
 <script src="/assets/js/project-modals.js"></script>
-<script>
-  var exploreBtn = document.querySelector('.explore-btn');
-  var btnClicked = false;
-  var tides = document.querySelector('.tides');
-  var projectItems = document.querySelectorAll('.project-item')
-
-  function showProjectItems() {
-    for (var i = 0; i < projectItems.length; i++) {
-      projectItems[i].classList.remove('hide');
-    }
-  }
-
-  exploreBtn.addEventListener('click', function() {
-    if (!btnClicked) {
-      tides.classList.add('high');
-      setTimeout(function() {
-        showProjectItems();
-        tides.classList.remove('high');
-      }, 2000);
-      exploreBtn.classList.add('hide');
-
-      btnClicked = true;
-    }
-  });
-</script>
+<script src="/assets/js/home-animation.js"></script>
