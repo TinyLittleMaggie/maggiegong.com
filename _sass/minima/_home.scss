@@ -2,6 +2,11 @@
 
   overflow: hidden;
 
+  .site-header {
+    z-index: 100;
+    background-color: transparent;
+  }
+
   .wrapper {
     position: relative;
   }
@@ -10,14 +15,24 @@
 
   .tides {
     width: 100vw;
-    height: 100vh;
-    z-index: -999;
+    height: 1000px;
+    z-index: 99;
     position: absolute;
     top: calc(100vh - 180px);
+    transition: top 2s ease-in;
     background-image: url('/assets/tides.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+  }
+
+  .tides.high {
+    top: -20px;
+    transition: top 2s ease-out;
+  }
+
+  .project-item.hide {
+    display: none;
   }
 
   #item-1 {
@@ -70,6 +85,16 @@
 
   .description {
     max-width: 350px;
+  }
+
+  .explore-btn {
+    opacity: 1;
+  }
+
+  .explore-btn.hide {
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: default;
   }
 
   // Modals
@@ -180,6 +205,8 @@
   // Footer
 
   .site-footer {
+    z-index: 100;
+
     .copyright {
       color: $brand-color-light;
     }

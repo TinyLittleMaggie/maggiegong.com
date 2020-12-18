@@ -27,12 +27,12 @@ index: 0
     <p class="description">
       I love creating interactive experiences that help people learn by playing.
     </p>
-    <a class="cta" href="#">Explore my projects →</a>
+    <a class="explore-btn" href="#">Explore my projects →</a>
 
     <!-- Clickable project items -->
-    <div class="project-item" id="item-1"></div>
-    <div class="project-item" id="item-2"></div>
-    <div class="project-item" id="item-3"></div>
+    <div class="project-item hide" id="item-1"></div>
+    <div class="project-item hide" id="item-2"></div>
+    <div class="project-item hide" id="item-3"></div>
 
   </div>
 </main>
@@ -43,3 +43,28 @@ index: 0
 {%- include_relative _demos/project-3.html -%}
 
 <script src="/assets/js/project-modals.js"></script>
+<script>
+  var exploreBtn = document.querySelector('.explore-btn');
+  var btnClicked = false;
+  var tides = document.querySelector('.tides');
+  var projectItems = document.querySelectorAll('.project-item')
+
+  function showProjectItems() {
+    for (var i = 0; i < projectItems.length; i++) {
+      projectItems[i].classList.remove('hide');
+    }
+  }
+
+  exploreBtn.addEventListener('click', function() {
+    if (!btnClicked) {
+      tides.classList.add('high');
+      setTimeout(function() {
+        showProjectItems();
+        tides.classList.remove('high');
+      }, 2000);
+      exploreBtn.classList.add('hide');
+
+      btnClicked = true;
+    }
+  });
+</script>
