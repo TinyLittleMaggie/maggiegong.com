@@ -9,7 +9,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li data-post-type="{{ post.type }}">
+      <li data-post-type="{{ post.type }}" data-post-date="{{ post.date }}">
         <p class="post-meta">{{ post.date | date: "%Y / %m / %d" }}</p>
         <h2 class="post-title">
           {{ post.title | escape }}
@@ -37,15 +37,15 @@ layout: default
     <li class="option">
       <label for="type">Type</label>
       <select name="type" id="type">
-        <option value="all">All</option>
-        <option value="project">Project</option>
-        <option value="experiment">Experiment</option>
-        <option value="thoughts">Thoughts</option>
+        <option value="All">All</option>
+        <option value="Project">Project</option>
+        <option value="Experiment">Experiment</option>
+        <option value="Thoughts">Thoughts</option>
       </select>
     </li>
   </ul>
 
 </div>
 
-<script src="/assets/js/sort-filter-posts.js"></script>
+<script src="/assets/js/sort-and-filter.js"></script>
 
