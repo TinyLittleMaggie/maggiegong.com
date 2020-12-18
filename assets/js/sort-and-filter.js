@@ -48,7 +48,7 @@ function shuffle(array) {
   return array;
 }
 
-// Sort any given array of posts based a criteria specified by "sortby"
+// Sort any given array of posts based on "sortby"
 function sortPosts(array, sortby) {
 
   // Create a copy of the array
@@ -70,7 +70,7 @@ function sortPosts(array, sortby) {
 
 }
 
-// Filter any given array of posts based a criteria specified by "type"
+// Filter any given array of posts based on "type"
 function filterPosts(array, type) {
 
   if (type === "All") {
