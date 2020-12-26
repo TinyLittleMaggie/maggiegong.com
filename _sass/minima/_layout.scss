@@ -38,6 +38,7 @@
   }
 
   .page-link {
+    font-weight: 400;
     color: $grey-color-light;
     transition: color 0.6s ease;
     line-height: $base-line-height;
@@ -51,7 +52,7 @@
 
     &.active {
       color: $text-color;
-      font-weight: 700;
+      font-weight: 500;
       position: relative;
 
       &:after {
