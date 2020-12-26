@@ -44,37 +44,69 @@
   list-style: none;
   flex-grow: 1;
 
-  .option {
+  .dropdown {
     margin-bottom: $spacing-unit * 1.5;
-  }
 
-  label {
-    font-weight: 700;
-    display: block;
-    margin-bottom: $spacing-unit * 0.2;
-  }
+    .name {
+      font-weight: 700;
+      display: block;
+      margin-bottom: $spacing-unit * 0.2;
+    }
 
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: $spacing-unit * 0.4 $spacing-unit * 0.1;
-    font-family: inherit;
-    font-size: $base-font-size;
-    color: $grey-color-dark;
-    border: none;
-    border-bottom: 1px solid $grey-color-dark;
-    width: 100%;
-    background: url('/assets/icons/arrow-dropdown.svg') 100% / 15% no-repeat;
-  }
+    .button {
+      padding: $spacing-unit * 0.4 $spacing-unit * 0.1;
+      font-family: inherit;
+      font-size: $base-font-size;
+      color: $grey-color-dark;
+      border: none;
+      border-bottom: 1px solid $grey-color-dark;
+      width: 100%;
+      background: url('/assets/icons/arrow-dropdown.svg') 100% / 15% no-repeat;
+      position: relative;
+    }
 
-  select:-ms-expand {
-    /* remove default arrow on ie10 and ie11 */
-    display: none;
-  }
+    .selected-option {
+      margin-bottom: 0;
+    }
 
-  select:focus {
-    outline: none;
-    background-color: $grey-color-lighter;
+    .menu {
+      border: 1px solid $grey-color-dark;
+      border-radius: 8px;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+    }
+
+    .menu.hide {
+      display: none;
+    }
+
+    .option {
+      padding: $spacing-unit * 0.35 $spacing-unit * 0.6;
+
+      label {
+        display: block;
+      }
+
+      input:checked+label {
+        font-weight: 700;
+        background: url('/assets/icons/check-mark.svg') 100% / 15% no-repeat;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-color-lighter;
+      }
+
+      &:hover {
+        background-color: $grey-color-lighter;
+      }
+    }
+
+    .radio-circle {
+      display: none;
+    }
   }
 }

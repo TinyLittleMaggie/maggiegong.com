@@ -26,22 +26,49 @@ layout: default
   {%- endif -%}
 
   <ul class="post-list-options">
-    <li class="option">
-      <label for="sort">Sort by</label>
-      <select name="sort" id="sort">
-        <option value="latest">Latest on top</option>
-        <option value="oldest">Oldest on top</option>
-        <option value="random">Random</option>
-      </select>
+    <li class="dropdown" id="sort">
+      <div class="name">Sort by</div>
+      <div class="button">
+        <p class="selected-option">Latest on top</p>
+        <div class="menu hide">
+          <div class="option">
+            <input class="radio-circle" type="radio" id="latest" name="sort" value="Latest on top" checked>
+            <label for="latest">Latest on top</label>
+          </div>
+          <div class="option">
+            <input class="radio-circle" type="radio" id="oldest" name="sort" value="Oldest on top">
+            <label for="oldest">Oldest on top</label>
+          </div>
+          <div class="option">
+            <input class="radio-circle" type="radio" id="random" name="sort" value="Random">
+            <label for="random">Random</label>
+          </div>
+        </div>
+      </div>
     </li>
-    <li class="option">
-      <label for="type">Type</label>
-      <select name="type" id="type">
-        <option value="All">All</option>
-        <option value="Project">Project</option>
-        <option value="Experiment">Experiment</option>
-        <option value="Thoughts">Thoughts</option>
-      </select>
+    <li class="dropdown" id="type">
+      <div class="name">Type</div>
+      <div class="button">
+        <p class="selected-option">All</p>
+        <div class="menu hide">
+          <div class="option">
+            <input class="radio-circle" type="radio" id="all" name="type" value="All" checked>
+            <label for="all">All</label>
+          </div>
+          <div class="option">
+            <input class="radio-circle" type="radio" id="project" name="type" value="Project">
+            <label for="project">Project</label>
+          </div>
+          <div class="option">
+            <input class="radio-circle" type="radio" id="experiment" name="type" value="Experiment">
+            <label for="experiment">Experiment</label>
+          </div>
+          <div class="option">
+            <input class="radio-circle" type="radio" id="thoughts" name="type" value="Thoughts">
+            <label for="thoughts">Thoughts</label>
+          </div>
+        </div>
+      </div>
     </li>
   </ul>
 

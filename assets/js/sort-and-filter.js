@@ -19,14 +19,51 @@ for (var i = 0; i < posts.length; i++) {
   postsArray.push(post);
 }
 
-// The dropdowns
+// The dropdown elements
 var dropdownsContainer = document.querySelector('.post-list-options');
-var sortDropdown = document.querySelector('#sort');
-var typeDropdown = document.querySelector('#type');
+var dropdownButtons = document.querySelectorAll('.post-list-options .button');
+var dropdownMenus = document.querySelectorAll('.post-list-options .menu');
 
 /* -------------------------------------------------------------------------- */
 /*                                Functions                                   */
 /* -------------------------------------------------------------------------- */
+
+// Detect which dropdown options are selected
+function getSortByValue() {
+  return document.querySelector('#sort input:checked').value;
+}
+function getTypeValue() {
+  return document.querySelector('#type input:checked').value;
+}
+
+// Determine whether a dropdown should be opened
+function openDropdown(eventTarget) {
+  if (eventTarget.classList.contains("button")) {
+    return true;
+  } else if (eventTarget.classList.contains("selected-option")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Determine which option has been selected
+function selectedOption(eventTarget) {
+  if (eventTarget.classList.contains("radio-circle")) {
+    return eventTarget.value;
+  } else if (eventTarget.classList.contains("option")) {
+    return eventTarget.querySelector(".radio-circle").value;
+  } else {
+    return false;
+  }
+}
+
+// Hide all dropdown menus
+function hideAllMenus() {
+  dropdownMenus.forEach(function(menu) {
+    menu.classList.add('hide');
+  });
+}
 
 // A helper function that randomizes a given array.
 function shuffle(array) {
@@ -56,15 +93,15 @@ function sortPosts(array, sortby) {
 
   // Return the sorted array based on the sortby value
   // - note: sort() and shuffle() both sort the array IN PLACE
-  if (sortby === "latest") {
+  if (sortby === "Latest on top") {
     return newArr.sort(function(a, b) {
       return a.date.localeCompare(b.date) * -1;
     });
-  } else if (sortby === "oldest") {
+  } else if (sortby === "Oldest on top") {
     return newArr.sort(function(a, b) {
       return a.date.localeCompare(b.date);
     });
-  } else if (sortby === "random") {
+  } else if (sortby === "Random") {
     return shuffle(newArr);
   }
 
@@ -97,17 +134,50 @@ function updatePostList(array) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                             Event listener                                 */
+/*                             Event listeners                                */
 /* -------------------------------------------------------------------------- */
 
-// Update the post list when a new selection is made from any of the dropdowns
+// --- 1. Dropdown menu behaviours
+
+// If an .option is clicked, simulate a click on the input element inside of it
+dropdownsContainer.addEventListener('click', function(e) {
+  if (e.target.classList.contains('option')) {
+    e.target.querySelector('input').click();
+  }
+});
+
+dropdownButtons.forEach(function(button) {
+  button.addEventListener('click', function(e) {
+    // If a dropdown button is clicked, open the corresponding menu
+    if (openDropdown(e.target)) {
+      // First, hide all menus in case there is already an open one
+      hideAllMenus();
+      // Then display the correct menu for the clicked button
+      this.querySelector('.menu').classList.remove('hide');
+    }
+    // Update the selected option on display
+    if (selectedOption(e.target)) {
+      this.querySelector('.selected-option').innerText = selectedOption(e.target);
+    }
+  });
+});
+
+// If a click happens outside of the dropdown, menu should be hidden
+document.addEventListener('click', function(e) {
+  if (!openDropdown(e.target)) {
+    hideAllMenus();
+  }
+});
+
+// --- 2. Update the post list when a new selection is made from any of the dropdowns
+
 dropdownsContainer.addEventListener('input', function(e) {
 
   // Filter the initial array of posts
-  var filtered = filterPosts(postsArray, typeDropdown.value);
+  var filtered = filterPosts(postsArray, getTypeValue());
 
   // Sort the filtered array
-  var sorted = sortPosts(filtered, sortDropdown.value);
+  var sorted = sortPosts(filtered, getSortByValue());
 
   // Display the result
   updatePostList(sorted);
