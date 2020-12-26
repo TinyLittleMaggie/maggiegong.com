@@ -28,6 +28,8 @@ var dropdownMenus = document.querySelectorAll('.post-list-options .menu');
 /*                                Functions                                   */
 /* -------------------------------------------------------------------------- */
 
+// --- 1. Basic dropdown menu behaviours:
+
 // Detect which dropdown options are selected
 function getSortByValue() {
   return document.querySelector('#sort input:checked').value;
@@ -64,6 +66,19 @@ function hideAllMenus() {
     menu.classList.add('hide');
   });
 }
+
+// Sort the options in a menu (place the selected option on top)
+function sortOptions(menu) {
+  var options = menu.querySelectorAll('.option');
+  options.forEach(function(option) {
+    var checked = option.querySelector('input:checked');
+    if (checked) {
+      menu.prepend(option);
+    }
+  });
+}
+
+// --- 2. Sorting the list of posts:
 
 // A helper function that randomizes a given array.
 function shuffle(array) {
@@ -137,23 +152,19 @@ function updatePostList(array) {
 /*                             Event listeners                                */
 /* -------------------------------------------------------------------------- */
 
-// --- 1. Dropdown menu behaviours
-
-// If an .option is clicked, simulate a click on the input element inside of it
-dropdownsContainer.addEventListener('click', function(e) {
-  if (e.target.classList.contains('option')) {
-    e.target.querySelector('input').click();
-  }
-});
+// --- 1. Basic dropdown menu behaviours
 
 dropdownButtons.forEach(function(button) {
   button.addEventListener('click', function(e) {
     // If a dropdown button is clicked, open the corresponding menu
     if (openDropdown(e.target)) {
+      var menu = this.querySelector('.menu');
       // First, hide all menus in case there is already an open one
       hideAllMenus();
+      // Then sort the options in the menu before displaying it
+      sortOptions(menu);
       // Then display the correct menu for the clicked button
-      this.querySelector('.menu').classList.remove('hide');
+      menu.classList.remove('hide');
     }
     // Update the selected option on display
     if (selectedOption(e.target)) {
@@ -166,6 +177,13 @@ dropdownButtons.forEach(function(button) {
 document.addEventListener('click', function(e) {
   if (!openDropdown(e.target)) {
     hideAllMenus();
+  }
+});
+
+// If an .option is clicked, simulate a click on the input element inside of it
+dropdownsContainer.addEventListener('click', function(e) {
+  if (e.target.classList.contains('option')) {
+    e.target.querySelector('input').click();
   }
 });
 
