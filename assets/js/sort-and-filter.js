@@ -67,13 +67,30 @@ function hideAllMenus() {
   });
 }
 
-// Sort the options in a menu (place the selected option on top)
+// Sort the options in any given menu
 function sortOptions(menu) {
+  // Save the options in an array
   var options = menu.querySelectorAll('.option');
-  options.forEach(function(option) {
-    var checked = option.querySelector('input:checked');
+  var optionsArray = [];
+  for (var i = 0; i < options.length; i++) {
+    var option = {
+      order: options[i].dataset.order,
+      node:  options[i]
+    }
+    optionsArray.push(option);
+  }
+  // Sort the array by the inherent order of its options
+  optionsArray.sort(function(a, b) {
+    return b.order - a.order;
+  });
+  optionsArray.forEach(function(option) {
+    menu.prepend(option.node);
+  });
+  // Place the selected option on top
+  optionsArray.forEach(function(option) {
+    var checked = option.node.querySelector('input:checked');
     if (checked) {
-      menu.prepend(option);
+      menu.prepend(option.node);
     }
   });
 }
