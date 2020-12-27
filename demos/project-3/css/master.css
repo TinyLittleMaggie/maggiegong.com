@@ -1,0 +1,195 @@
+#project-3 .demo {
+  text-align: center;
+  height: 390px;
+  position: relative;
+}
+
+
+/* ------------------------- Title and Reset Button ------------------------- */
+
+#project-3 .demo .title {
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#project-3 .demo h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.4rem;
+  margin: 2.5rem auto 0.5rem;
+  color: #363636;
+  display: inline-block;
+}
+
+#project-3 .demo .title i {
+  font-size: 1.2rem;
+  color: #363636;
+  position: absolute;
+  right: 3rem;
+  top: 3.7rem;
+}
+
+#project-3 .demo .title i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ------------------------------ The Card Deck ----------------------------- */
+
+#project-3 .demo .deck {
+  background-color: #fff;
+  width: 360px;
+  height: 360px;
+  border-radius: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#project-3 .demo .card {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.4rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+#project-3 .demo .front {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  background-color: #A9B7A9;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+#project-3 .demo .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  background-color: #E8E7E4;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#project-3 .demo .card i {
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+#project-3 .demo .show {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+#project-3 .demo .wrong {
+  background-color: #4E5C75;
+}
+
+/* ------------------------- Performace Indicators -------------------------- */
+
+#project-3 .demo .performance {
+  width: 360px;
+  height: 2rem;
+  margin: 0.5rem auto 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #363636;
+  position: relative;
+}
+
+#project-3 .demo .moveCounter {
+  position: absolute;
+  left: 0.5rem;
+}
+
+#project-3 .demo .timer {
+  position: absolute;
+}
+
+#project-3 .demo .starRating {
+  position: absolute;
+  right: 2rem;
+}
+
+#project-3 .demo .resetButton {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+/* ------------------------ Congratulations Pop-up -------------------------- */
+
+#project-3 .demo .winningPopUp {
+  background-color: #FFFFFF;
+  font-family: 'Quicksand', sans-serif;
+  width: 300px;
+  height: 300px;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+#project-3 .demo .popUpComment {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #A9B7A9;
+  position: relative;
+  top: 2.5rem;
+}
+
+#project-3 .demo .popUpTime {
+  font-size: 1rem;
+  color: #363636;
+  position: relative;
+  top: 3rem;
+  padding: 0 4rem;
+}
+
+#project-3 .demo .popUpStars {
+  font-size: 2rem;
+  color: #FCD277;
+  position: relative;
+  top: 3.2rem;
+}
+
+#project-3 .demo .playAgainButton {
+  background-color: #4E5C75;
+  color: #FFFFFF;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  margin: auto;
+  padding-top: 0.45rem;
+  position: relative;
+  top: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+#project-3 .demo .playAgainButton:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+

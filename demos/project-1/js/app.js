@@ -3,11 +3,11 @@
 /*****************************************************************************/
 
 // Reset game
-function resetGame() {
+function resetFroggerGame() {
   player = new Player(2, 0);
   allStars = [];
   starNumber = 0;
-  document.querySelector('.winningPopUp').style.visibility = "hidden";
+  document.querySelector('#project-1 .winningPopUp').style.visibility = "hidden";
 }
 
 // Random Number Generator
@@ -55,7 +55,7 @@ function checkCollisions() {
   // Detect player arrival
   if (player.y > 394) {
     // Display congratulations panel
-    document.querySelector('.winningPopUp').style.visibility = "visible";
+    document.querySelector('#project-1 .winningPopUp').style.visibility = "visible";
     document.querySelector('.score').innerHTML = '× ' + starNumber;
     // Disable player movements
     player.active = false;
@@ -208,5 +208,5 @@ document.addEventListener('keyup', function(e) {
 
 // The "Play again" button
 document.querySelector('.playAgain').addEventListener('click', function() {
-  resetGame();
+  resetFroggerGame();
 });
