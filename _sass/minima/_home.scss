@@ -164,9 +164,28 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1;
       }
 
       .video-overlay.hide {
+        display: none;
+      }
+
+      .video-overlay-after {
+        margin-bottom: $spacing-unit;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: $spacing-unit * 3;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .video-overlay-after.hide {
         display: none;
       }
 
@@ -201,6 +220,9 @@
         position: absolute;
         bottom: $spacing-unit;
         left: calc(50% - 105px);
+      }
+
+      .cta.hide {
         display: none;
       }
 
