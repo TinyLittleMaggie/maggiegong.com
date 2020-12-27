@@ -166,6 +166,10 @@
         align-items: center;
       }
 
+      .video-overlay.hide {
+        display: none;
+      }
+
       .text {
         max-width: 400px;
       }
@@ -180,6 +184,15 @@
         &:hover {
           cursor: pointer;
         }
+      }
+
+      video {
+        object-fit: cover;
+        display: inherit;
+      }
+
+      video:focus {
+        outline: none;
       }
 
       .cta {

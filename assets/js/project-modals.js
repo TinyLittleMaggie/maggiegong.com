@@ -22,6 +22,11 @@ for (var i = 0; i < overlays.length; i++) {
     if (overlayClicked || closeAreaClicked) {
       // Hide the modal (and the overlay that contains it)
       this.style.display = "none";
+      // Pause the video in the current modal (if any)
+      var video = this.querySelector('video');
+      if (video) {
+        video.pause();
+      }
     }
   });
 }
