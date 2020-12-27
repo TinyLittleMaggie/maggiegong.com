@@ -1,0 +1,66 @@
+.starboard {
+  text-align: left;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.winningPopUp {
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-family: 'Amatic SC', cursive;
+  visibility: hidden;
+  text-align: center;
+}
+
+.popUpPanel {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+}
+
+.popUpComment {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  font-size: 40px;
+  color: #6EB9CC;
+}
+
+.popUpScore {
+  width: 100%;
+  position: absolute;
+  top: 130px;
+  font-size: 36px;
+  color: #FFB346;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  line-height: 60px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.playAgain {
+  width: 160px;
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 80px);
+}
+
+.playAgain:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
