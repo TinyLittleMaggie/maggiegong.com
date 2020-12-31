@@ -6,7 +6,7 @@ date:    2020-12-31 13:25:00 +0800
 excerpt: I have spent the past 1.5 months doing KonMari for all my content that I used to host on Adobe Portfolio. As of today, I am officially moving to this new website that I built in Jekyll!
 ---
 
-I have spent the past 1.5 months doing <a href="https://en.wikipedia.org/wiki/Marie_Kondo#KonMari_method" target="_blank">KonMari</a> for all my content that I used to host on Adobe Portfolio. As of today, I am officially moving to this new website built in <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>!
+I have spent the past 1.5 months doing <a href="https://en.wikipedia.org/wiki/Marie_Kondo#KonMari_method" target="_blank">KonMari</a> for all my content that I used to host on Adobe Portfolio. As of today, I am officially moving to this new website that I built in <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>!
 
 <br>
 
