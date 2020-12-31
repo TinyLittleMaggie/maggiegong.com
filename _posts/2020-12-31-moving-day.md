@@ -26,7 +26,7 @@ There will be three types of posts:
 
   - Unlike _Projects_ and _Experiments_ where I write about things I have _done_, _**Thoughts**_ is a "miscellaneous" category where I can write about anything I want.
 
-I have used "anything" twice already. I guess it is scary to commit to a long-term goal, so it takes two free-to-do-whatever categories to balance it out :)
+I have said "anything" twice already. I guess it is scary to commit to a long-term goal, so it takes two free-to-do-whatever categories to balance it out :)
 
 #### About
 
