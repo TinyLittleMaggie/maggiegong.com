@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:   "Moving day!"
+title:   "Moving day"
 type:    "Thoughts"
 date:    2020-12-31 13:25:00 +0800
 excerpt: I have spent the past 1.5 months doing KonMari for all my content that I used to host on Adobe Portfolio. As of today, I am officially moving to this new website that I built in Jekyll!
@@ -36,9 +36,9 @@ Writing the _About_ page gave me an identity crisis, but yes, it describes why I
 
 ### Thank you and goodbye
 
-A lot of projects have been archived despite the fact that each one of them has helped me learn and grow as a human and as a professional.
+A lot of projects have been archived despite the fact that each one of them has helped me learn and grow as a human and as a professional. Partly eager to enter a new chapter in my life with better focus and clarity, partly too lazy to rewrite these blog posts all over again, I am packing away a copy of my old website onto a hard drive only for my future self to see.
 
-Here's a group photo of some of my recent projects. Thank you all for being part of my journey!
+Here's a group photo of some of my recent projects. Before I head into the New Year, I'd like to thank them all for being part of my journey.
 
 ![](https://res.cloudinary.com/tinylittlemaggie/image/upload/v1609389247/maggiegong.com/moving-day/group-photo_plherm.png)
 
