@@ -219,7 +219,13 @@
 }
 
 .post {
+  padding-bottom: $spacing-unit;
+
   h3 {
     margin-bottom: $spacing-unit;
+  }
+
+  img {
+    margin: $spacing-unit * 0.8 0;
   }
 }
