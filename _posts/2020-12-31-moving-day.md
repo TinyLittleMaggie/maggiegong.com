@@ -22,7 +22,7 @@ There will be three types of posts:
 
   - _**Projects**_ typically take a few weeks or sometimes a few months to complete. They are often directly related to my long-term goal.
 
-  - _**Experiments**_ are smaller projects that take anywhere from an afternoon to a few days. _Experiments_ can be about anything: learning new skills, trying out new tools, or just goofing around.
+  - _**Experiments**_ are smaller projects that take anywhere from an afternoon to a few days to complete. _Experiments_ can be about anything: learning new skills, trying out new tools, or just goofing around.
 
   - Unlike _Projects_ and _Experiments_ where I write about things I have _done_, _**Thoughts**_ is a "miscellaneous" category where I can write about anything I want.
 
